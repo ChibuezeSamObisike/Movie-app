@@ -20,7 +20,7 @@ const saveToLocalStorage = (items) => {
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState("Batman");
   const [favourties, setFavourites] = useState(
     getItemsfromStorage() ? getItemsfromStorage() : []
   );
@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div className="container-fluid movie-app">
-      <div className="row d-flex align-items-center mt-4 mb-4">
+      <div className="row d-flex align-items-center wrapper mt-4 mb-4">
         <MovieListHeading heading="Movies" />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
